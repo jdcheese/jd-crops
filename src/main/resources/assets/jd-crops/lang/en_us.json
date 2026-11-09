@@ -1,0 +1,13 @@
+{
+  "block.jd-crops.apple_sapling": "AppleSapling",
+  "block.jd-crops.fermenting_block": "Fermenter",
+  "block.jd-crops.oven_block": "Oven",
+  "block.jd-crops.pressing_block": "Pressing Barrel",
+  "creativemodetab.jd-crops.jd-crops": "Jdcrops",
+  "item.jd-crops.heart_berries": "Heartberries",
+  "item.jd-crops.strawberry": "Strawberry",
+  "item.jd-crops.strawberry_seeds": "Strawberry Seeds",
+  "item.jd-crops.sweet_berry_juice": "Sweetberry Juice",
+  "item.jd-crops.sweet_berry_wine": "Sweetberry Wine",
+  "item.minecraft.sweet_berries": "Sweetberries"
+}

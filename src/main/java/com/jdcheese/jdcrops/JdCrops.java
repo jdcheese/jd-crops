@@ -1,5 +1,11 @@
 package com.jdcheese.jdcrops;
 
+import com.jdcheese.jdcrops.block.JdBlocks;
+import com.jdcheese.jdcrops.block.entity.JdBlockEntities;
+import com.jdcheese.jdcrops.creativemodetab.JdCreativeModeTab;
+import com.jdcheese.jdcrops.item.JdItems;
+import com.jdcheese.jdcrops.menu.JdMenuTypes;
+import com.jdcheese.jdcrops.recipe.JdRecipes;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
@@ -9,17 +15,19 @@ import org.slf4j.LoggerFactory;
 
 public class JdCrops implements ModInitializer {
 	public static final String MOD_ID = "jd-crops";
-
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+        JdCreativeModeTab.registerJdCreativeModeTabs();
+
+        JdItems.registerJdItems();
+        JdBlocks.registerJdBlocks();
+
+        JdBlockEntities.registerJdBlockEntities();
+
+        JdMenuTypes.registerModMenuTypes();
+        JdRecipes.registerModRecipes();
 
 		LOGGER.info("Hello Fabric world!");
 	}

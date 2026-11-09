@@ -18,6 +18,9 @@
 		"main": [
 			"com.jdcheese.jdcrops.JdCrops"
 		],
+        "client": [
+          "com.jdcheese.jdcrops.JdcropsClient"
+        ],
 		"fabric-datagen": [
 			"com.jdcheese.jdcrops.JdCropsDataGenerator"
 		]

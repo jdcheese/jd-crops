@@ -1,0 +1,16 @@
+package com.jdcheese.jdcrops.recipe.custom;
+
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeInput;
+
+public record FermentingRecipeInput(ItemStack input) implements RecipeInput {
+    @Override
+    public ItemStack getItem(int index) {
+        return input;
+    }
+
+    @Override
+    public int size() {
+        return 1;
+    }
+}
