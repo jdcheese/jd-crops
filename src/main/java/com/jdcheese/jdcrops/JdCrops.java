@@ -6,20 +6,29 @@ import com.jdcheese.jdcrops.block.entity.JdBlockEntities;
 import com.jdcheese.jdcrops.creativemodetab.JdCreativeModeTab;
 import com.jdcheese.jdcrops.item.JdItems;
 import com.jdcheese.jdcrops.menu.JdMenuTypes;
+import com.jdcheese.jdcrops.particles.JdParticles;
 import com.jdcheese.jdcrops.recipe.JdRecipes;
 import net.fabricmc.api.ModInitializer;
-
+import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
+import net.minecraft.core.Registry;
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class JdCrops implements ModInitializer {
-	public static final String MOD_ID = "jd-crops";
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static final String MOD_ID = "jd-crops";
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	@Override
-	public void onInitialize() {
+
+
+    public static Identifier id(String path) {
+        return Identifier.fromNamespaceAndPath(MOD_ID, path);
+    }
+
+    @Override
+    public void onInitialize() {
         JdCreativeModeTab.registerJdCreativeModeTabs();
 
         JdItems.registerJdItems();
@@ -30,10 +39,8 @@ public class JdCrops implements ModInitializer {
         JdMenuTypes.registerModMenuTypes();
         JdRecipes.registerModRecipes();
 
-		LOGGER.info("Hello Fabric world!");
-	}
+        JdParticles.registerParticles();
 
-	public static Identifier id(String path) {
-		return Identifier.fromNamespaceAndPath(MOD_ID, path);
-	}
+        LOGGER.info("Hello Fabric world!");
+    }
 }

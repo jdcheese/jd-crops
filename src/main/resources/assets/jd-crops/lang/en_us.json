@@ -1,7 +1,6 @@
 {
-  "block.jd-crops.apple_sapling": "AppleSapling",
+  "block.jd-crops.apple_sapling": "Apple Sapling",
   "block.jd-crops.fermenting_block": "Fermenter",
-  "block.jd-crops.oven_block": "Oven",
   "block.jd-crops.pressing_block": "Pressing Barrel",
   "creativemodetab.jd-crops.jd-crops": "Jdcrops",
   "item.jd-crops.heart_berries": "Heartberries",

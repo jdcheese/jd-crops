@@ -1,27 +1,33 @@
 package com.jdcheese.jdcrops.item;
 
+
+
+
 import com.jdcheese.jdcrops.JdCrops;
 import com.jdcheese.jdcrops.block.JdBlocks;
 import com.jdcheese.jdcrops.food.JdFoods;
+import com.jdcheese.jdcrops.item.custom.*;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
 
+import static net.minecraft.world.item.Items.BOWL;
+import static net.minecraft.world.item.Items.GLASS_BOTTLE;
+
+
 public class JdItems {
     public static final Item JUICER = registerItem("juicer",  Item::new);
     public static final Item DOUGH = registerItem("dough", Item::new);
+    public static final Item ICE_CUBES = registerItem("ice_cubes", Item::new);
 
     public static final Item STRAWBERRY = registerItem("strawberry", properties -> new Item(properties.food(JdFoods.STRAWBERRY).compostable(ContextIntProviders.COMPOSTABLE_MEDIUM_HIGH)) {
         @Override
@@ -51,26 +57,69 @@ public class JdItems {
             properties -> new BlockItem(JdBlocks.MALO_BERRY_BUSH,
                     properties.useItemDescriptionPrefix().food(JdFoods.MALO_BERRIES)));
 
-    //juices
-    public static final Item SWEET_BERRY_JUICE = registerItem("sweet_berry_juice", properties -> new Item(properties
-            .food(JdFoods.SWEET_BERRY_JUICE, JdFoods.JUICE_CONSUMABLE)) {
+
+    //milk
+    public static final Item MILK_BOTTLE = registerItem("milk_bottle", properties -> {
+        return new DrinkItem(properties
+                .food(JdFoods.MILK_BOTTLE).craftRemainder(GLASS_BOTTLE)) {
+        };
     });
 
-    public static final Item GLOW_BERRY_JUICE = registerItem("glow_berry_juice", properties -> new Item(properties
-            .food(JdFoods.GLOW_BERRY_JUICE, JdFoods.JUICE_CONSUMABLE)) {
+    //juices
+    public static final Item SWEET_BERRY_JUICE = registerItem("sweet_berry_juice", properties -> {
+        return new DrinkItem(properties
+                .food(JdFoods.SWEET_BERRY_JUICE, JdFoods.JUICE_CONSUMABLE).craftRemainder(GLASS_BOTTLE)) {
+        };
+    });
+
+    public static final Item GLOW_BERRY_JUICE = registerItem("glow_berry_juice", properties -> {
+        return new DrinkItem(properties
+                .food(JdFoods.GLOW_BERRY_JUICE, JdFoods.JUICE_CONSUMABLE).craftRemainder(GLASS_BOTTLE)) {
+        };
+    });
+
+    public static final Item HEART_BERRY_JUICE = registerItem("heart_berry_juice", properties -> {
+        return new DrinkItem(properties
+                .food(JdFoods.HEART_BERRY_JUICE, JdFoods.JUICE_CONSUMABLE).craftRemainder(GLASS_BOTTLE)) {
+        };
     });
 
     //wines
-    public static final Item SWEET_BERRY_WINE = registerItem("sweet_berry_wine", properties -> new Item(properties
-            .food(JdFoods.SWEET_BERRY_WINE, JdFoods.WINE_CONSUMABLE)) {
+    public static final Item SWEET_BERRY_WINE = registerItem("sweet_berry_wine", properties -> {
+        return new DrinkItem(properties
+                .food(JdFoods.SWEET_BERRY_WINE, JdFoods.WINE_CONSUMABLE).craftRemainder(GLASS_BOTTLE)) {
+        };
     });
 
-    public static final Item GLOW_BERRY_WINE = registerItem("glow_berry_wine", properties -> new Item(properties
-            .food(JdFoods.GLOW_BERRY_WINE, JdFoods.WINE_CONSUMABLE)) {
+    public static final Item GLOW_BERRY_WINE = registerItem("glow_berry_wine", properties -> {
+        return new DrinkItem(properties
+                .food(JdFoods.GLOW_BERRY_WINE, JdFoods.WINE_CONSUMABLE).craftRemainder(GLASS_BOTTLE)) {
+        };
     });
 
-    public static final Item HEART_BERRY_WINE = registerItem("heart_berry_wine", properties -> new Item(properties
-            .food(JdFoods.HEART_BERRY_WINE, JdFoods.WINE_CONSUMABLE)) {
+    public static final Item HEART_BERRY_WINE = registerItem("heart_berry_wine", properties -> {
+        return new DrinkItem(properties
+                .food(JdFoods.HEART_BERRY_WINE, JdFoods.WINE_CONSUMABLE).craftRemainder(GLASS_BOTTLE)) {
+        };
+    });
+
+    //yogurt
+    public static final Item PLAIN_YOGURT = registerItem("plain_yogurt", properties -> {
+        return new DrinkItem(properties
+                .food(JdFoods.PLAIN_YOGURT).craftRemainder(GLASS_BOTTLE)) {
+        };
+    });
+
+    //ice creams
+    public static final Item SWEET_BERRY_ICE_CREAM = registerItem("sweet_berry_ice_cream", properties -> {
+        return new FoodItem(properties.food(JdFoods.SWEET_BERRY_ICE_CREAM).craftRemainder(BOWL)) {
+            @Override
+            public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay
+                    display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+                builder.accept(Component.translatable("tooltip.jdcrops.sweet_berry_ice_cream"));
+                super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+            }
+        };
     });
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {

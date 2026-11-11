@@ -16,6 +16,7 @@ public class PressingScreen extends AbstractContainerScreen<PressingMenu> {
 
     public PressingScreen(PressingMenu menu, Inventory inventory, Component title) {
         super(menu, inventory, title);
+        this.titleLabelX = (this.imageWidth - this.font.width(this.title)) / 2;
     }
 
     @Override

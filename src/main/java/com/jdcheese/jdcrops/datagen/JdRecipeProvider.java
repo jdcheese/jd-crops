@@ -67,6 +67,20 @@ public class JdRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.WATER_BUCKET), has(Items.WATER_BUCKET))
                         .save(output, "jdcrops:dough_to_bread");
 
+                shapeless(RecipeCategory.MISC, JdItems.ICE_CUBES, 3)
+                        .requires(Items.ICE)
+                        .unlockedBy(getHasName(Items.ICE), has(Items.ICE))
+                        .save(output);
+
+                shaped(RecipeCategory.MISC, JdItems.MILK_BOTTLE, 1)
+                        .pattern("GMG")
+                        .pattern(" G ")
+                        .define('G', Items.GLASS)
+                        .define('M', Items.MILK_BUCKET)
+                        .unlockedBy(getHasName(Items.MILK_BUCKET), has(Items.MILK_BUCKET))
+                        .save(output);
+
+
                 FermentingRecipeBuilder.fermentingRecipe(RecipeCategory.MISC, Ingredient.of(JdItems.SWEET_BERRY_JUICE), JdItems.SWEET_BERRY_WINE, 1)
                         .unlockedBy(getHasName(JdItems.SWEET_BERRY_JUICE), has(JdItems.SWEET_BERRY_JUICE))
                         .save(output, "jd-crops:sweet_berry_juice_to_sweet_berry_wine");
@@ -74,6 +88,10 @@ public class JdRecipeProvider extends FabricRecipeProvider {
                 FermentingRecipeBuilder.fermentingRecipe(RecipeCategory.MISC, Ingredient.of(JdItems.GLOW_BERRY_JUICE), JdItems.GLOW_BERRY_WINE, 1)
                         .unlockedBy(getHasName(JdItems.GLOW_BERRY_JUICE), has(JdItems.GLOW_BERRY_JUICE))
                         .save(output, "jd-crops:glow_berry_juice_to_glow_berry_wine");
+
+                FermentingRecipeBuilder.fermentingRecipe(RecipeCategory.MISC, Ingredient.of(JdItems.MILK_BOTTLE), JdItems.PLAIN_YOGURT, 1)
+                        .unlockedBy(getHasName(JdItems.MILK_BOTTLE), has(JdItems.MILK_BOTTLE))
+                        .save(output, "jd-crops:milk_to_yogurt");
 
                 PressingRecipeBuilder.pressingRecipe(RecipeCategory.MISC, List.of(
                                         Ingredient.of(Items.SWEET_BERRIES),
@@ -88,6 +106,14 @@ public class JdRecipeProvider extends FabricRecipeProvider {
                                 JdItems.GLOW_BERRY_JUICE, 1)
                         .unlockedBy(getHasName(Items.GLOW_BERRIES), has(Items.GLOW_BERRIES))
                         .save(output, "jd-crops:glow_berries_to_glow_berry_juice");
+
+                shapeless(RecipeCategory.MISC, JdItems.SWEET_BERRY_ICE_CREAM, 1)
+                        .requires(Items.SWEET_BERRIES)
+                        .requires(JdItems.ICE_CUBES)
+                        .requires(JdItems.MILK_BOTTLE)
+                        .requires(Items.BOWL)
+                        .unlockedBy(getHasName(Items.ICE), has(Items.ICE))
+                        .save(output);
             }
         };
 

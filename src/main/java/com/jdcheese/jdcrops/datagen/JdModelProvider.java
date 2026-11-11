@@ -37,6 +37,8 @@ public class JdModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(JdItems.GLOW_BERRY_JUICE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(JdItems.GLOW_BERRY_WINE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(JdItems.JUICER, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(JdItems.DOUGH, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(JdItems.MILK_BOTTLE, ModelTemplates.FLAT_ITEM);
 
     }
 }

@@ -16,6 +16,7 @@ public class FermentingScreen extends AbstractContainerScreen<FermentingMenu> {
 
     public FermentingScreen(FermentingMenu menu, Inventory inventory, Component title) {
         super(menu, inventory, title);
+        this.titleLabelX = (this.imageWidth - this.font.width(this.title)) / 2;
     }
 
     @Override

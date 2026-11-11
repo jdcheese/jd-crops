@@ -11,7 +11,9 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
 public class JdBlockEntities {
-    public static final BlockEntityType<FermentingBlockEntity> FERMENTING_BE =
+    public static void registerJdBlockEntities() {
+        JdCrops.LOGGER.info("Registering Block Entities for " + JdCrops.MOD_ID);
+    }    public static final BlockEntityType<FermentingBlockEntity> FERMENTING_BE =
             Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, Identifier.fromNamespaceAndPath(JdCrops.MOD_ID, "fermenting_be"),
                     FabricBlockEntityTypeBuilder.create(FermentingBlockEntity::new, JdBlocks.FERMENTING_BLOCK).build());
 
@@ -19,7 +21,5 @@ public class JdBlockEntities {
             Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, Identifier.fromNamespaceAndPath(JdCrops.MOD_ID, "pressing_be"),
                     FabricBlockEntityTypeBuilder.create(PressingBlockEntity::new, JdBlocks.PRESSING_BLOCK).build());
 
-    public static void registerJdBlockEntities() {
-        JdCrops.LOGGER.info("Registering Block Entities for " + JdCrops.MOD_ID);
-    }
+
 }

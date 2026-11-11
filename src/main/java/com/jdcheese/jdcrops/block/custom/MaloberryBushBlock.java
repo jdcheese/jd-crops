@@ -28,7 +28,7 @@ public class MaloberryBushBlock extends SweetBerryBushBlock {
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         int age = state.getValue(AGE);
         boolean isGrown = age == 3;
-        if(age > 1) {
+        if (age > 1) {
             int count = 1 + level.getRandom().nextInt(2);
             popResource(level, pos, new ItemStack(JdItems.MALO_BERRIES, count + (isGrown ? 1 : 0)));
             level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS,

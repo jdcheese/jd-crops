@@ -13,12 +13,19 @@ public class JdFoods {
     public static final FoodProperties HEART_BERRIES = new FoodProperties.Builder().nutrition(1).saturationModifier(0.15f).alwaysEdible().build();
     public static final FoodProperties MALO_BERRIES = new FoodProperties.Builder().nutrition(1).saturationModifier(0.15f).alwaysEdible().build();
 
+    public static final FoodProperties MILK_BOTTLE = new FoodProperties.Builder().nutrition(2).saturationModifier(0.15f).build();
+
     public static final FoodProperties SWEET_BERRY_JUICE = new FoodProperties.Builder().nutrition(2).saturationModifier(0.15f).build();
     public static final FoodProperties SWEET_BERRY_WINE = new FoodProperties.Builder().nutrition(2).saturationModifier(0.15f).build();
     public static final FoodProperties GLOW_BERRY_JUICE = new FoodProperties.Builder().nutrition(2).saturationModifier(0.15f).build();
     public static final FoodProperties GLOW_BERRY_WINE = new FoodProperties.Builder().nutrition(2).saturationModifier(0.15f).build();
 
+    public static final FoodProperties HEART_BERRY_JUICE = new FoodProperties.Builder().nutrition(2).saturationModifier(0.15f).build();
     public static final FoodProperties HEART_BERRY_WINE = new FoodProperties.Builder().nutrition(2).saturationModifier(0.15f).build();
+
+    public static final FoodProperties PLAIN_YOGURT = new FoodProperties.Builder().nutrition(4).saturationModifier(0.30f).build();
+
+    public static final FoodProperties SWEET_BERRY_ICE_CREAM = new FoodProperties.Builder().nutrition(4).saturationModifier(0.30f).build();
 
     public static  final Consumable WINE_CONSUMABLE = Consumables.defaultDrink()
             .consumeSeconds(1f)

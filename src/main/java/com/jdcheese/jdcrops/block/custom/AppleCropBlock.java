@@ -1,11 +1,9 @@
 package com.jdcheese.jdcrops.block.custom;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -17,20 +15,18 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BonemealSource;
+import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
-
-import java.util.OptionalInt;
 
 public class AppleCropBlock extends Block implements BonemealableBlock {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
@@ -38,7 +34,7 @@ public class AppleCropBlock extends Block implements BonemealableBlock {
 
     public AppleCropBlock(BlockBehaviour.Properties properties) {
         super(properties);
-        this.registerDefaultState((BlockState)((BlockState)this.stateDefinition.any()).setValue(AGE, 0));
+        this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0));
     }
 
     protected boolean isRandomlyTicking(final BlockState state) {
@@ -61,10 +57,10 @@ public class AppleCropBlock extends Block implements BonemealableBlock {
             if (level instanceof ServerLevel serverLevel) {
                 if (state.getValue(AGE) != 0) {
                     Vec3 movement = entity.isClientAuthoritative() ? entity.getKnownMovement() : entity.oldPosition().subtract(entity.position());
-                    if (movement.horizontalDistanceSqr() > (double)0.0F) {
+                    if (movement.horizontalDistanceSqr() > (double) 0.0F) {
                         double xs = Math.abs(movement.x());
                         double zs = Math.abs(movement.z());
-                        if (xs >= (double)0.003F || zs >= (double)0.003F) {
+                        if (xs >= (double) 0.003F || zs >= (double) 0.003F) {
                             entity.hurtServer(serverLevel, level.damageSources().sweetBerryBush(), 1.0F);
                         }
                     }
