@@ -1,0 +1,7 @@
+{
+  "type": "jd-crops:fermenting",
+  "ingredient": "jd-crops:glow_berry_juice",
+  "result": {
+    "id": "jd-crops:glow_berry_wine"
+  }
+}

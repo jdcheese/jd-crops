@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "bottom": "jd-crops:block/fermenting_block_bottom",
+    "front": "jd-crops:block/fermenting_block_front_on",
+    "side": "jd-crops:block/fermenting_block_side",
+    "top": "jd-crops:block/fermenting_block_top"
+  }
+}

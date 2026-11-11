@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": "minecraft:bucket",
+    "P": "#minecraft:planks",
+    "S": "#minecraft:wooden_slabs"
+  },
+  "pattern": [
+    "PSP",
+    "PBP",
+    "PSP"
+  ],
+  "result": {
+    "id": "jd-crops:fermenting_block"
+  }
+}

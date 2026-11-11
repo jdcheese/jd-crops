@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:sweet_berries",
+    "jd-crops:ice_cubes",
+    "jd-crops:milk_bottle",
+    "minecraft:bowl"
+  ],
+  "result": {
+    "id": "jd-crops:sweet_berry_ice_cream"
+  }
+}

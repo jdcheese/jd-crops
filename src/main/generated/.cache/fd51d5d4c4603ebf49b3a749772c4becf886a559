@@ -1,0 +1,5 @@
+// 26.3	-999999999-01-01T00:00:00	jd-crops/Block Loot Tables
+0e5685ad99f5039fd0b6f841772ad978f7d02234 data/jd-crops/loot_table/blocks/fermenting_block.json
+27f7549e4f55c98a44de46fa97d84a01e082561b data/jd-crops/loot_table/blocks/heart_berry_bush.json
+aa9734c68dab6dd32cc6a46dd97cb848088d52d9 data/jd-crops/loot_table/blocks/pressing_block.json
+e614093d45f1d3c33cb5846fe3bf3544a6d47ce6 data/jd-crops/loot_table/blocks/strawberry_crop.json

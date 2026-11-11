@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "jd-crops:block/fermenting_block"
+  }
+}

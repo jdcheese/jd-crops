@@ -1,0 +1,10 @@
+{
+  "type": "jd-crops:pressing",
+  "ingredients": [
+    "minecraft:glow_berries",
+    "minecraft:glass_bottle"
+  ],
+  "result": {
+    "id": "jd-crops:glow_berry_juice"
+  }
+}

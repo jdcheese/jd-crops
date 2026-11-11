@@ -1,0 +1,7 @@
+{
+  "type": "jd-crops:fermenting",
+  "ingredient": "jd-crops:sweet_berry_juice",
+  "result": {
+    "id": "jd-crops:sweet_berry_wine"
+  }
+}

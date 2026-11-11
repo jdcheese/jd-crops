@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "C": "minecraft:copper_ingot"
+  },
+  "pattern": [
+    " C ",
+    "CCC"
+  ],
+  "result": {
+    "id": "jd-crops:juicer"
+  }
+}

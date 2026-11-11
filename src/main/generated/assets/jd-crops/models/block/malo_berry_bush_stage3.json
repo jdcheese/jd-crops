@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "jd-crops:block/malo_berry_bush_stage3"
+  }
+}

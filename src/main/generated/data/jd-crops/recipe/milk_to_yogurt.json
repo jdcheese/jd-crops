@@ -1,0 +1,7 @@
+{
+  "type": "jd-crops:fermenting",
+  "ingredient": "jd-crops:milk_bottle",
+  "result": {
+    "id": "jd-crops:plain_yogurt"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "G": "minecraft:glass",
+    "M": "minecraft:milk_bucket"
+  },
+  "pattern": [
+    "GMG",
+    " G "
+  ],
+  "result": {
+    "id": "jd-crops:milk_bottle"
+  }
+}

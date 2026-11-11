@@ -1,0 +1,25 @@
+// 26.3	-999999999-01-01T00:00:00	jd-crops/Jdcrops Recipes
+eecefe6cd0aa0465f082ab8a4b6b7ce36639d8e1 data/jd-crops/advancement/recipes/misc/dough_to_bread.json
+edd79b7a984952c03b18d8cfeb6dfdeb1fd41494 data/jd-crops/advancement/recipes/misc/fermenter.json
+991adb0942e00a8797b6e0ffc50def2f2bdc040a data/jd-crops/advancement/recipes/misc/glow_berries_to_glow_berry_juice.json
+feb15d9920ad5678943c88ffc44eb3fb855a4a73 data/jd-crops/advancement/recipes/misc/glow_berry_juice_to_glow_berry_wine.json
+07a5588d21fb01eac0b40de50d30c4678f0eceea data/jd-crops/advancement/recipes/misc/ice_cubes.json
+77740599c0a866942d5f82e0064edd3506b1a8b5 data/jd-crops/advancement/recipes/misc/juicer.json
+76f70f3e5b331d2f5f2202a53914c55ee5e7848e data/jd-crops/advancement/recipes/misc/milk_bottle.json
+21089c8c031d50865fd55b3555978c6a738f1661 data/jd-crops/advancement/recipes/misc/milk_to_yogurt.json
+2e787cbb38fe5520a3b4202712a8fe0f728771f7 data/jd-crops/advancement/recipes/misc/pressing_barrel.json
+12358af068b0f78a9acd7c7168062557e2d0fdb3 data/jd-crops/advancement/recipes/misc/sweet_berries_to_sweet_berry_juice.json
+d621e3dbb5a3659a9a263770da611c9e519582c3 data/jd-crops/advancement/recipes/misc/sweet_berry_ice_cream.json
+173c8559ac0f0ce22208f92e0e49be7f6076e550 data/jd-crops/advancement/recipes/misc/sweet_berry_juice_to_sweet_berry_wine.json
+a0875448b9009ab9453114e9c03397e648f5acaa data/jd-crops/recipe/dough_to_bread.json
+3a51f289d15b8457aae8c05861fdb3e517d0b0e1 data/jd-crops/recipe/fermenter.json
+4a888e896988316671facfdee9d397b4fd9f3335 data/jd-crops/recipe/glow_berries_to_glow_berry_juice.json
+18c8fe1a553002b6b51b70de427a4dd4bd248b3e data/jd-crops/recipe/glow_berry_juice_to_glow_berry_wine.json
+fa777bbbde16497aa5c29026203b927cd08d2541 data/jd-crops/recipe/ice_cubes.json
+aa072d12dee203f4843a4b22594564241dc49663 data/jd-crops/recipe/juicer.json
+650f7a930125e58c668af13fd9c0b15927bcfdd2 data/jd-crops/recipe/milk_bottle.json
+4e9c158749c53a1e187a576533142ec85e65b8e8 data/jd-crops/recipe/milk_to_yogurt.json
+354ff392a869be21618c909d43337a3d40e39931 data/jd-crops/recipe/pressing_barrel.json
+b685cee775b1a5a1850045d18d193057ba96df7f data/jd-crops/recipe/sweet_berries_to_sweet_berry_juice.json
+363b274aef9a5967d5fe194322c3e498bd9b905a data/jd-crops/recipe/sweet_berry_ice_cream.json
+c2964f876863f9bb84cfa723791d26411b386ea9 data/jd-crops/recipe/sweet_berry_juice_to_sweet_berry_wine.json

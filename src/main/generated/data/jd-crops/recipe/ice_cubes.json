@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:ice"
+  ],
+  "result": {
+    "count": 3,
+    "id": "jd-crops:ice_cubes"
+  }
+}
