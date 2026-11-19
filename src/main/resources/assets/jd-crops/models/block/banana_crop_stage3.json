@@ -1,0 +1,7 @@
+{
+  "parent": "jd-crops:block/jd-crops_leaves",
+  "textures": {
+    "all": "jd-crops:block/orchid_leaves",
+    "crop": "jd-crops:block/banana_ripe"
+  }
+}

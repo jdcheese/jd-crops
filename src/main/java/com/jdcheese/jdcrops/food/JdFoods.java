@@ -10,8 +10,7 @@ import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 public class JdFoods {
 
     public static final FoodProperties STRAWBERRY = new FoodProperties.Builder().nutrition(3).saturationModifier(0.25f).build();
-    public static final FoodProperties HEART_BERRIES = new FoodProperties.Builder().nutrition(1).saturationModifier(0.15f).alwaysEdible().build();
-    public static final FoodProperties MALO_BERRIES = new FoodProperties.Builder().nutrition(1).saturationModifier(0.15f).alwaysEdible().build();
+    public static final FoodProperties BERRIES = new FoodProperties.Builder().nutrition(1).saturationModifier(0.15f).alwaysEdible().build();
 
     public static final FoodProperties MILK_BOTTLE = new FoodProperties.Builder().nutrition(2).saturationModifier(0.15f).build();
 

@@ -2,7 +2,9 @@ package com.jdcheese.jdcrops.block.entity;
 
 import com.jdcheese.jdcrops.JdCrops;
 import com.jdcheese.jdcrops.block.JdBlocks;
+import com.jdcheese.jdcrops.block.entity.custom.DryingBlockEntity;
 import com.jdcheese.jdcrops.block.entity.custom.FermentingBlockEntity;
+import com.jdcheese.jdcrops.block.entity.custom.MillBlockEntity;
 import com.jdcheese.jdcrops.block.entity.custom.PressingBlockEntity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.core.Registry;
@@ -21,5 +23,11 @@ public class JdBlockEntities {
             Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, Identifier.fromNamespaceAndPath(JdCrops.MOD_ID, "pressing_be"),
                     FabricBlockEntityTypeBuilder.create(PressingBlockEntity::new, JdBlocks.PRESSING_BLOCK).build());
 
+    public static final BlockEntityType<MillBlockEntity> MILL_BE =
+            Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, Identifier.fromNamespaceAndPath(JdCrops.MOD_ID, "mill_be"),
+                    FabricBlockEntityTypeBuilder.create(MillBlockEntity::new, JdBlocks.MILL_BLOCK).build());
 
+    public static final BlockEntityType<DryingBlockEntity> DRYING_BE =
+            Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, Identifier.fromNamespaceAndPath(JdCrops.MOD_ID, "drying_be"),
+                    FabricBlockEntityTypeBuilder.create(DryingBlockEntity::new, JdBlocks.DRYING_BLOCK).build());
 }

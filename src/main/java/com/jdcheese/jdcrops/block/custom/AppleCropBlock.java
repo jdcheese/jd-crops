@@ -77,10 +77,10 @@ public class AppleCropBlock extends Block implements BonemealableBlock {
         return !isMaxAge && itemStack.is(Items.BONE_MEAL) ? InteractionResult.PASS : super.useItemOn(itemStack, state, level, pos, player, hand, hitResult);
     }
 
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         int age = state.getValue(AGE);
         boolean isMaxAge = age == 3;
-        if (age > 1) {
+        if (age > 2) {
             int randomDropAmount = 1 + level.getRandom().nextInt(2);
             Block.popResource(level, pos, new ItemStack(Items.APPLE, randomDropAmount + (isMaxAge ? 1 : 0)));
             level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES,

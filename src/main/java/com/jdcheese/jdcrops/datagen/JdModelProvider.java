@@ -20,10 +20,20 @@ public class JdModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
         blockModelGenerators.createFurnace(JdBlocks.FERMENTING_BLOCK, TexturedModel.ORIENTABLE);
         blockModelGenerators.createTrivialBlock(JdBlocks.PRESSING_BLOCK, TexturedModel.ORIENTABLE);
+        blockModelGenerators.createHorizontallyRotatedBlock(JdBlocks.DRYING_BLOCK, TexturedModel.ORIENTABLE);
+        blockModelGenerators.createHorizontallyRotatedBlock(JdBlocks.MILL_BLOCK, TexturedModel.ORIENTABLE);
         blockModelGenerators.createTrivialBlock(JdBlocks.ORCHID_LEAVES, TexturedModel.LEAVES);
         blockModelGenerators.createPlantWithDefaultItem(JdBlocks.APPLE_SAPLING, JdBlocks.POTTED_APPLE_SAPLING, BlockModelGenerators.PlantType.NOT_TINTED);
+        blockModelGenerators.createPlantWithDefaultItem(JdBlocks.CHERRY_SAPLING, JdBlocks.POTTED_CHERRY_SAPLING, BlockModelGenerators.PlantType.NOT_TINTED);
+        blockModelGenerators.createPlantWithDefaultItem(JdBlocks.BLACK_CHERRY_SAPLING, JdBlocks.POTTED_BLACK_CHERRY_SAPLING, BlockModelGenerators.PlantType.NOT_TINTED);
+        blockModelGenerators.createPlantWithDefaultItem(JdBlocks.BANANA_SAPLING, JdBlocks.POTTED_BANANA_SAPLING, BlockModelGenerators.PlantType.NOT_TINTED);
         blockModelGenerators.createCrossBlock(JdBlocks.HEART_BERRY_BUSH, BlockModelGenerators.PlantType.NOT_TINTED, HeartBerryBushBlock.AGE, 0, 1, 2, 3);
         blockModelGenerators.createCrossBlock(JdBlocks.MALO_BERRY_BUSH, BlockModelGenerators.PlantType.NOT_TINTED, HeartBerryBushBlock.AGE, 0, 1, 2, 3);
+        blockModelGenerators.createCrossBlock(JdBlocks.BEAR_BERRY_BUSH, BlockModelGenerators.PlantType.NOT_TINTED, HeartBerryBushBlock.AGE, 0, 1, 2, 3);
+        blockModelGenerators.createCrossBlock(JdBlocks.BLACK_BERRY_BUSH, BlockModelGenerators.PlantType.NOT_TINTED, HeartBerryBushBlock.AGE, 0, 1, 2, 3);
+        blockModelGenerators.createCrossBlock(JdBlocks.BLACK_CURRANT_BUSH, BlockModelGenerators.PlantType.NOT_TINTED, HeartBerryBushBlock.AGE, 0, 1, 2, 3);
+        blockModelGenerators.createCrossBlock(JdBlocks.RED_CURRANT_BUSH, BlockModelGenerators.PlantType.NOT_TINTED, HeartBerryBushBlock.AGE, 0, 1, 2, 3);
+        blockModelGenerators.createCrossBlock(JdBlocks.WHITE_CURRANT_BUSH, BlockModelGenerators.PlantType.NOT_TINTED, HeartBerryBushBlock.AGE, 0, 1, 2, 3);
         blockModelGenerators.createCropBlock(JdBlocks.STRAWBERRY_CROP, StrawberryCropBlock.AGE, 0, 1, 2, 3, 4, 5);
         blockModelGenerators.createCropBlock(JdBlocks.RICE_CROP, RiceCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
 
@@ -32,6 +42,9 @@ public class JdModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
         itemModelGenerators.generateFlatItem(JdItems.STRAWBERRY, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(JdItems.CHERRIES, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(JdItems.BLACK_CHERRIES, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(JdItems.BANANA, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(JdItems.SWEET_BERRY_JUICE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(JdItems.SWEET_BERRY_WINE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(JdItems.GLOW_BERRY_JUICE, ModelTemplates.FLAT_ITEM);

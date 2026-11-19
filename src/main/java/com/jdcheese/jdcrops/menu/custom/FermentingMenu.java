@@ -32,9 +32,9 @@ public class FermentingMenu extends AbstractContainerMenu {
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
-        this.addSlot(new Slot(inventory,0, 50, 34));
+        this.addSlot(new Slot(inventory,0, 56, 35));
         // Output
-        this.addSlot(new Slot(inventory,1, 108, 34) {
+        this.addSlot(new Slot(inventory,1, 116, 35) {
             @Override
             public boolean mayPlace(ItemStack itemStack) {
                 return false;

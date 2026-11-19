@@ -17,6 +17,9 @@ import java.util.List;
 
 public class JdPlacedFeatures {
     public static final ResourceKey<PlacedFeature> APPLE_TREE_PLACED_KEY = registerKey("apple_tree_placed");
+    public static final ResourceKey<PlacedFeature> CHERRY_TREE_PLACED_KEY = registerKey("cherry_tree_placed");
+    public static final ResourceKey<PlacedFeature> BLACK_CHERRY_TREE_PLACED_KEY = registerKey("black_cherry_tree_placed");
+    public static final ResourceKey<PlacedFeature> BANANA_TREE_PLACED_KEY = registerKey("banana_tree_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.FEATURE);
@@ -24,6 +27,18 @@ public class JdPlacedFeatures {
         register(context, APPLE_TREE_PLACED_KEY, configuredFeatures.getOrThrow(JdFeatures.APPLE_TREE_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
                         JdBlocks.APPLE_SAPLING));
+
+        register(context, CHERRY_TREE_PLACED_KEY, configuredFeatures.getOrThrow(JdFeatures.CHERRY_TREE_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                        JdBlocks.CHERRY_SAPLING));
+
+        register(context, BLACK_CHERRY_TREE_PLACED_KEY, configuredFeatures.getOrThrow(JdFeatures.BLACK_CHERRY_TREE_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                        JdBlocks.BLACK_CHERRY_SAPLING));
+
+        register(context, BANANA_TREE_PLACED_KEY, configuredFeatures.getOrThrow(JdFeatures.BANANA_TREE_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                        JdBlocks.BANANA_SAPLING));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {

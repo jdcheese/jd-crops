@@ -1,0 +1,7 @@
+{
+  "parent": "jd-crops:block/jd-crops_leaves",
+  "textures": {
+    "all": "minecraft:block/cherry_leaves",
+    "crop": "jd-crops:block/cherry_ripe"
+  }
+}
